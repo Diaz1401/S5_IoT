@@ -41,9 +41,10 @@
  * 
  * @see https://randomnerdtutorials.com/esp32-data-logging-firebase-realtime-database
  * 
- * @author Diaz Nuraji
+ * @author Diaz Nuraji, Yudo Lasprianto
  * @date 2025
  */
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>

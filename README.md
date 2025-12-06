@@ -119,3 +119,7 @@ Sensor calibration constants are defined at the top of `src/main.ino`. You may n
 *   `tdsCalibration`: Multiplier for TDS value.
 *   `phVoltageOffset`: Offset for pH sensor voltage.
 *   `phSlope`: Slope for pH calculation.
+
+## License
+
+[MIT License](LICENSE)

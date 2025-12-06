@@ -1,3 +1,49 @@
+/**
+ * @file main.ino
+ * @brief IoT Water Quality Monitoring System for ESP32
+ * 
+ * This sketch implements a comprehensive water quality monitoring system that reads
+ * multiple sensor values and logs them to Firebase Realtime Database. It includes
+ * support for demo mode with simulated data for testing purposes.
+ * 
+ * @details
+ * 
+ * **Sensors:**
+ * - Turbidity Sensor (GPIO 32): Measures water clarity in NTU units
+ * - TDS Sensor (GPIO 33): Measures Total Dissolved Solids with temperature compensation
+ * - pH Sensor (GPIO 34): Measures acidity/alkalinity with calibration offset and slope
+ * - DS18B20 Temperature Sensor (GPIO 4): Measures water temperature via One-Wire protocol
+ * 
+ * **Features:**
+ * - WiFi connectivity with secure SSL/TLS communication
+ * - Firebase Realtime Database integration for data persistence
+ * - NTP time synchronization for accurate timestamps
+ * - Configurable calibration parameters for each sensor
+ * - Demo mode with random data generation for testing
+ * - Asynchronous Firebase operations with event-based callback handling
+ * - Sensor data stored both as historical records and real-time snapshot
+ * 
+ * **Configuration:**
+ * Requires a "secret.h" file defining:
+ * - WIFI_SSID, WIFI_PASSWORD: Network credentials
+ * - API_KEY, DATABASE_URL: Firebase project details
+ * - USER_EMAIL, USER_PASSWORD: Firebase authentication credentials
+ * - DEMO_MODE: Boolean to enable/disable demo mode (default: false)
+ * 
+ * **Data Structure:**
+ * Sensor readings are stored in Firebase at: /sensorData/{uid}/{timestamp}
+ * Real-time data snapshot is maintained at: /sensorData/{uid}/realtime
+ * Each record contains: temperature, turbidity, tds, ph, and timestamp
+ * 
+ * **Timing:**
+ * - Demo mode: Sends data every 2 seconds
+ * - Normal mode: Sends data every 60 seconds
+ * 
+ * @see https://randomnerdtutorials.com/esp32-data-logging-firebase-realtime-database
+ * 
+ * @author Diaz Nuraji
+ * @date 2025
+ */
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>

@@ -41,7 +41,10 @@
  * 
  * @see https://randomnerdtutorials.com/esp32-data-logging-firebase-realtime-database
  * 
- * @author Diaz Nuraji, Yudo Lasprianto
+ * @authors:
+ * - Yudo Lasprianto (Initial pin setup and sensor calibration)
+ * - Diaz Nuraji (Add RTDB, NTP, demo mode)
+ * 
  * @date 2025
  */
 

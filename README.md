@@ -1,6 +1,6 @@
 # TRASI IoT - Water Quality Monitoring System
 
-TRASI is an IoT-based shrimp pond water quality monitoring system built on the ESP32 platform. It continuously measures key water parameters—Turbidity, TDS (Total Dissolved Solids), pH, and Temperature—and logs the data to Firebase Realtime Database for remote monitoring and analysis.
+TRASI is an IoT-based shrimp pond water quality monitoring system built on the ESP32 platform. It continuously measures key water parameters (Turbidity, TDS, pH, and Temperature) and logs the data to Firebase Realtime Database for remote monitoring and analysis.
 
 ## Features
 
@@ -70,7 +70,7 @@ The project relies on the following libraries (automatically managed by Platform
     // Set to true to simulate sensor data (no hardware needed)
     const bool DEMO_MODE = false; 
 
-    #endif
+    #endif SECRET_H
     ```
 
 3.  **Build the Project**
